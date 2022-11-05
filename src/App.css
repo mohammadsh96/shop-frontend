@@ -1,0 +1,32 @@
+.header{
+width:100%;
+background-color:rgb(46, 45, 45);
+ font-size :25px;
+ color :#fff;
+ height:50px;
+ margin-top: 0;
+}
+.header nav {
+
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-decoration: none;
+
+}
+.header nav a {
+cursor: pointer;
+margin-left:0;
+transition: 0.4s;
+text-decoration: none;
+color:white !important
+}
+.header nav a:hover {
+    margin-top: 15px;
+
+    cursor: pointer;
+    margin-left:0;
+color:rgba(187, 39, 201, 0.753);
+
+    }

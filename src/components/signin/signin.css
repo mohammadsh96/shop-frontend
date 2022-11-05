@@ -1,0 +1,30 @@
+.loginForm{
+    /* border:2px solid rgb(70, 248, 99); */
+    margin-left: 400px;
+     width:600px;
+}
+
+.GeeksForGeeks {
+  background-image: 
+  url(
+"https://media.geeksforgeeks.org/wp-content/uploads/rk.png");
+  background-size: "cover";
+  height: 150%;
+  width:100%;
+  margin-top:0px;
+  font-size:50px;
+  background-repeat:auto; 
+}
+.signinlink{
+    color : rgb(0, 0, 0);
+    font-size : 20px ;
+    margin-bottom: 20px;
+    font-weight: 600;
+    }
+    
+    .signinlink:hover{
+     color:rgb(39, 88, 223);
+    
+    }
+    /* software development i javascript at abd alazie... */
+
