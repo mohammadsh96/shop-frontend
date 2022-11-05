@@ -2,6 +2,7 @@ import React ,{useContext,useEffect} from "react";
 import {Redirect ,Switch ,Link} from 'react-router-dom';
 import './signin.css'
 import {LoginContext} from '../../context/auth'
+import cookie from 'react-cookies'
 const  SignIn =  () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -44,6 +45,12 @@ const  SignIn =  () => {
     
       
     </div>
+
+    {cookie.load('id') ?  <Switch>
+      <Redirect from="*" to="/Dashboard" ></Redirect>
+    </Switch>
+  :<></>  
+  }
     </section>
   );
 };

@@ -30,3 +30,15 @@ color:white !important
 color:rgba(187, 39, 201, 0.753);
 
     }
+.logout{
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+transition: 0.3s;
+}   
+.logout:hover{
+    background-color: transparent;
+    color: #cc0c0c;
+    cursor: pointer;
+    
+}  

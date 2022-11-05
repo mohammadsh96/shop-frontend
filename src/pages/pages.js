@@ -5,7 +5,7 @@ import SignUp from "../components/signup/signup";
 import SignIn from "../components/signin/signin";
 import Products from "../components/products/products";
 import SingleProduct from "../components/products/singleProduct";
-
+import Dashboard from "../components/dashboard/dashboard"
 export default function Pages() {
   return (
     <>
@@ -17,6 +17,9 @@ export default function Pages() {
           <Route exact path="/productDetails" component={Products} />
           <Route exact path="/productDetails" component={Products} />
           <Route exact path="/productDetails/:id" component={SingleProduct} />
+          
+          <Route exact path="/Dashboard" component={Dashboard} />
+
 
 
           productDetails
