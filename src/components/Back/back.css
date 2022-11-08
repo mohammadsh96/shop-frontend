@@ -1,0 +1,15 @@
+.main{
+    width:100%;
+    height:100vh;
+    z-index:105;
+}
+video{
+    width:100%;
+    height:100%;
+    object-fit:cover ; 
+    /* margin-top: -500px; */
+    /* background: transparent; */
+    z-index:-1;
+    position:relative;
+    
+}

@@ -2,9 +2,9 @@ import React,{useState ,useEffect} from 'react';
 import { Link  } from 'react-router-dom';
 import axios from 'axios'
 import './products.css';
-import cookie from 'react-cookies'
 
-const api ='https://shop-backend-com.herokuapp.com'
+import {API} from '../../utilize'
+const api =API
 
 export default function Products(){
 
@@ -27,45 +27,32 @@ useEffect(()=>{
     return (<>
     
 
-    <div className="container">
+    <div className="userProducts">
     {productData.map((val, index) => {
           const { name, category, price, quantity,  id, imageURL2 ,imageURL1 } = val
           return (
-            <div className="box shadow" id="boxSh" key={index}>
+            <div className="OneProductClass" key={index}>
                 <Link to={`/productDetails/${id}`}>
-                <div className="postImg" >
-
-                  <img src={imageURL1} alt='' />
-                
-                </div>
+                <img src={imageURL1} alt='' />
+                      
                 </Link>
 
-                <div className="text">
-                  <div className="category flex">
-                    
-                  </div>
                     <h4>{name}</h4>
-                  <div>
-                    <h4 className="btn2">{price} $</h4>{" "}
-                  </div>
+                
+                    <h5 className="btn2">{price}$$</h5>
+                
                   
-                  {/* <p>
-                  inCart : {quantity}
-                  </p> */}
-                </div>
-                <div className="button flex">
-                  
-                  {/* <span>post id = {id} </span> */}
-                </div>
-              </div>
+                 
+            
+               
 
 
+    </div>
 )
 })}
 
 
-    </div>
-    
+</div>
     
     </>)
 }

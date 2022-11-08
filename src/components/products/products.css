@@ -70,7 +70,7 @@
     grid-template-columns: auto auto auto;
     margin-left: 200px;
     gap:30px;
-
+border : 2px solid red;
 
 }
 .postImg:hover img{
@@ -131,3 +131,96 @@ transition: 0.4s;
         color:rgb(226, 60, 0);
     
         }
+.main-div form { 
+
+    border:2px solid rgb(6, 108, 126);
+
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(6, 108, 126);
+    -webkit-box-shadow: 10px 10px 5px rgb(21, 58, 65);
+    -moz-box-shadow: 10px 10px 5px rgb(10, 16, 17);
+
+}
+label{
+    font-weight: 400;
+    color:rgb(53, 48, 48);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+input ,select,button{
+    /* width: 400px; */
+height:50px;
+background-color:transparent;
+border:3px inherit black;
+border-radius: 10px;
+font-size: 20px !important;
+padding: 5px;
+
+}
+button{
+    margin-top: 10px;
+    background-color: rgb(9, 78, 3);
+    color:#ffffff;
+}
+
+
+<!----------- from dashboard--->
+.OneProductClass{
+    display:flex ; 
+    flex-direction: column;
+    border:2px solid rgb(6, 108, 126);
+    width:fit-content;
+    margin : 20px ; 
+    box-shadow: 10px 10px 5px rgb(6, 108, 126);
+-webkit-box-shadow: 10px 10px 5px rgb(21, 58, 65);
+-moz-box-shadow: 10px 10px 5px rgb(10, 16, 17);
+border-radius: 5px ;
+/* padding-left: 5px; */
+margin-top: 100px;
+
+
+    
+}
+.OneProductClass h4 {
+    margin-top: 3px;
+    margin-left: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px black, 0 0 5px blue, 0 0 2px darkblue;
+    transition: 0.3s;
+}.OneProductClass h5 {
+    margin-left: 5px;
+    color:rgb(3, 145, 10);
+    text-shadow: 1px 1px 1px rgb(255, 255, 255), 0 0 5px rgb(137, 238, 137), 0 0 2px rgb(15, 88, 37);
+    transition: 0.3s;
+
+}
+.OneProductClass img { 
+    width: 250px ; 
+    height : 250px ; 
+    transition: 0.5s;
+
+}
+
+<!----hover --->
+.OneProductClass:hover h4 {
+    margin-top: 3px;
+    margin-left: 5px;
+    color: rgb(241, 241, 241);
+    text-shadow: -1px -1px -1px black, 0 0 5px blue, 0 0 2px darkblue;
+
+}.OneProductClass:hover h5 {
+    margin-left: 5px;
+    color:rgb(207, 8, 8);
+    text-shadow: 1px 1px 1px rgb(255, 255, 255), 1 1 6px rgb(240, 73, 87), 1 1 3px rgb(238, 20, 20);
+cursor: pointer ;
+}
+.OneProductClass img:hover { 
+    width: 250px ; 
+    height : 280px ;
+    border:2px solid rgb(43, 46, 230);
+
+}
+.userProducts{
+    margin-top: 50px;
+}

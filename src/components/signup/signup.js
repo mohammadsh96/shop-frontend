@@ -1,15 +1,16 @@
-import React ,{useContext,useEffect} from 'react';
+import React ,{useContext,useEffect } from 'react';
 import {Link} from 'react-router-dom'
 import {Redirect ,Switch} from 'react-router-dom';
-
+import Back from '../Back/back'
 
 import './signup.css'
 import {LoginContext} from '../../context/auth'
  const SignUp = ()=>{
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-const auth =useContext(LoginContext)
+   
+   useEffect(() => {
+     window.scrollTo(0, 0);
+    }, []);
+    const auth =useContext(LoginContext)
 
 const handleLogin =(e)=>{
     e.preventDefault()
@@ -21,9 +22,11 @@ auth.SignUpFunction(e.target.username.value,e.target.password.value )
 
 
 
-return(    
+return(  
   <section className="GeeksForGeeks">
-<div className="container">
+  <Back> 
+  </Back>
+
 
 <form onSubmit={handleLogin} className="loginForm">
   <div>
@@ -50,8 +53,12 @@ return(
     <Redirect from='/signup' to={`/signin`}></Redirect>
     </Switch></> : <> </>}
 
-</div>
+    {auth.loginStatus ? <> <Switch>
+    <Redirect from='/signup' to={`/Dashboard`}></Redirect>
+    </Switch></> : <> </>}
+    
 </section>
+ 
 )
 
 }

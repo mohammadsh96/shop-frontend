@@ -4,7 +4,8 @@ import base64 from 'base-64';
 import cookie from 'react-cookies';
 import axios from 'axios';
 // import { baseURL } from "../../utilize/constants";
-const API ='https://shop-backend-com.herokuapp.com'
+import {API} from '../utilize'
+const api =API
 export const LoginContext = React.createContext();
 export default function LoginProvider(props) {
  const [signUp,setSignUp]=useState(false)
@@ -32,7 +33,7 @@ export default function LoginProvider(props) {
       try {
             
          const userData = { username:`${username}`, password:`${password}`}
-       let data = await axios.post(`${API}/signup` , userData)    
+       let data = await axios.post(`${api}/signup` , userData)    
 .then(setSignUp(true))
       } catch (err) {
           console.log(err)
@@ -41,7 +42,7 @@ export default function LoginProvider(props) {
   }
     const loginFunction = async (username, password) => {
         try {
-            const response = await superagent.post(`${API}/signin`).set('authorization', `Basic ${base64.encode(`${username}:${password}`)}`);
+            const response = await superagent.post(`${api}/signin`).set('authorization', `Basic ${base64.encode(`${username}:${password}`)}`);
            
             validateMyUser(response.body.user);
         } catch (err) {
