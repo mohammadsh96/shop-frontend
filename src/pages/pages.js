@@ -6,10 +6,14 @@ import SignIn from "../components/signin/signin";
 import Products from "../components/products/products";
 import SingleProduct from "../components/products/singleProduct";
 import Dashboard from "../components/dashboard/dashboard"
+import Back from "../components/Back/back";
 export default function Pages() {
   return (
     <>
       <Header></Header>
+      {/* <Back> */}
+
+
       <Router>
         <Switch>
           <Route exact path="/signup" component={SignUp} />
@@ -25,6 +29,7 @@ export default function Pages() {
           productDetails
         </Switch>
       </Router>
+      {/* </Back> */}
     </>
   );
 }

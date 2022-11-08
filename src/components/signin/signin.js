@@ -3,12 +3,15 @@ import {Redirect ,Switch ,Link} from 'react-router-dom';
 import './signin.css'
 import {LoginContext} from '../../context/auth'
 import cookie from 'react-cookies'
+import Back from '../Back/back'
+
 const  SignIn =  () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const auth =useContext(LoginContext)
+
   const handleLogin = async (e) => {
 
   
@@ -24,7 +27,8 @@ const  SignIn =  () => {
   };
   return ( 
     <section className="GeeksForGeeks">
-      <div className="container">
+  <Back> 
+  </Back>
 
       <form onSubmit={handleLogin} className="loginForm">
         <br></br>
@@ -44,13 +48,15 @@ const  SignIn =  () => {
      
     
       
-    </div>
 
     {cookie.load('id') ?  <Switch>
       <Redirect from="*" to="/Dashboard" ></Redirect>
     </Switch>
   :<></>  
   }
+   {auth.loginStatus ? <> <Switch>
+    <Redirect from='/signup' to={`/Dashboard`}></Redirect>
+    </Switch></> : <> </>}
     </section>
   );
 };

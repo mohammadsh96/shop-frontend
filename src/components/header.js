@@ -17,7 +17,7 @@ export default function Header(){
 
 <a href="/cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
 
-<span onClick={()=>auth.logoutFunction()} className="logout"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+<span onClick={()=>auth.logoutFunction()} className="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</span>
 
 
 

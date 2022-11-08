@@ -1,19 +1,15 @@
 .loginForm{
-    margin-left: 400px;
+    margin-left: auto;
      width:600px;
      margin-right: auto;
+     margin-top: -700px;
+     position: relative;
 }
 
 .GeeksForGeeks {
-  background-image: 
-  url(
-"https://media.geeksforgeeks.org/wp-content/uploads/rk.png");
-  background-size: "cover";
-  height: 150%;
-  width:100%;
-  margin-top:0px;
+ 
   font-size:50px;
-  background-repeat:auto; 
+  opacity: hidden;
 }
 .signinlink{
     color : rgb(0, 0, 0);
